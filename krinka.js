@@ -9,8 +9,6 @@ const ACCOMMODATIONS_NUMBER = alphabet.length ** CODE_LENGTH;
 const perms = PermutationsWithRepetition(alphabet, CODE_LENGTH);
 let k = 0;
 
-
-
 perms.each(function(v){
     let code = v.join('');
     axios.get(`https://7745.by/krynka/check-code/${code}`).then(res => {
