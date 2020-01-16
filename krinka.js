@@ -5,7 +5,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 
 const CODE_LENGTH = 8;
 const BUNCH_SIZE = 1000000;
-const ACCOMODATIONS_NUMBER = alphabet.length ** CODE_LENGTH;
+const ACCOMMODATIONS_NUMBER = alphabet.length ** CODE_LENGTH;
 const perms = PermutationsWithRepetition(alphabet, CODE_LENGTH);
 let k = 0;
 
@@ -20,6 +20,6 @@ perms.each(function(v){
     });
     k++;
     if (k % BUNCH_SIZE === 0) {
-        console.log(Math.round(k / ACCOMODATIONS_NUMBER * 10000) / 100  + '%');
+        console.log(Math.round(k / ACCOMMODATIONS_NUMBER * 10000) / 100  + '%');
     }
 });
